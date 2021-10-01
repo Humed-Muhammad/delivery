@@ -1,0 +1,61 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+require "vendor/autoload.php";
+
+use \Firebase\JWT\JWT;
+
+require APPPATH . 'libraries/RestController.php';
+
+use chriskacerguis\RestServer\RestController;
+
+class Warehouse  extends RestController
+{
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    //warehouse
+    public function index_get($id)
+    {
+        $this->response([[
+            "id" => "7879",
+            "warehouse_name" => "Mogula",
+            "specific_location" => "bole",
+            "city" => "piassa",
+            "subcity" => "",
+        ]]);
+    }
+
+    public function detail_get($id)
+    {
+        $this->response([
+            "id" => "7879",
+            "warehouse_name" => "mologa",
+            "specific_location" => "bole",
+            "region" => "7879",
+            "city" => "piassa",
+            "subcity" => "",
+            "woreda" => "023",
+            "address" => "",
+            
+        ]);
+    }
+
+    public function index_post()
+    {
+        $this->response([
+           "status"=>true,
+           "message"=>"Saved successfully"
+        ]);
+    }
+
+    public function index_delete($id)
+    {
+        $this->response([
+           "status"=>true,
+           "message"=>"Deleted successfully"
+        ]);
+    }
+
+}

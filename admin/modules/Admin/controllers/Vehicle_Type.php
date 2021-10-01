@@ -1,0 +1,65 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+require "vendor/autoload.php";
+
+use \Firebase\JWT\JWT;
+
+require APPPATH . 'libraries/RestController.php';
+
+use chriskacerguis\RestServer\RestController;
+
+class Vehicle_Type  extends RestController
+{
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    //for create and update
+    public function index_post()
+    {
+        $this->response([
+            "status" => true,
+            "message" => "saved successfully !"
+        ]);
+    }
+
+    //for list
+    public function index_get()
+    {
+        $this->response([[
+            "id" => "",
+            "title" => "",
+            "per_km" => "",
+            "per_kg" => "",
+            "status" => "",
+            "photo" => "",
+        ]]);
+    }
+
+    //for detail
+    public function detail_get($id)
+    {
+        $this->response([
+            "id" => "",
+            "title" => "",
+            "description" => "",
+            "per_km" => "",
+            "per_kg" => "",
+            "status" => "",
+            "photo" => ""
+        ]);
+    }
+
+    //for delete
+    public function index_delete($id)
+    {
+        $this->response([
+            "status" => true,
+            "message" => "deleted successfully !"
+        ]);
+    }
+
+
+
+}
