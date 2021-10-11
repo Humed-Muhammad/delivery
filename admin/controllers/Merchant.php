@@ -33,7 +33,6 @@ class Merchant  extends RestController
             "email" => "",
             "phone_number" => "",
             "company_name" => "",
-            "company_address" => "",
             "role" => "",
             "status" => "",
         ]]);
@@ -62,16 +61,4 @@ class Merchant  extends RestController
             "message" => "deleted successfully !"
         ]);
     }
-
-    //for group get 
-    public function load_group_get()
-    {
-        $this->response([
-            ["value" => "", "text" => ""],
-            ["value" => "", "text" => ""]
-        ]);
-    }
-
-
-
 }
