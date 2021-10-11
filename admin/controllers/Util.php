@@ -81,11 +81,11 @@ class Util  extends RestController
       }
       
       //for vehicle
-      public function load_vehicle_get($id)
+      public function load_vehicle_get()
       {
           $this->response([
-              ["value" => "", "text" => ""],
-              ["value" => "", "text" => ""],
+            ["id"=>"jkhjk9","image" => "", "vehicle_type" => ""],
+            ["id"=>"jkhjk9","image" => "", "vehicle_type" => ""],
           ]);
       }
 
@@ -94,10 +94,13 @@ class Util  extends RestController
       public function load_driver_post()
       {
           $this->response([
-              ["value" => "", "text" => ""],
-              ["value" => "", "text" => ""],
+              ["id"=>"jkhjk9","name" => "", "image" => "", "driver_type" => "",],
+              ["id"=>"jkhjk9","name" => "", "image" => "", "driver_type" => "",],
+
           ]);
       }
+
+
 
        //for setting create
        public function setting_post()

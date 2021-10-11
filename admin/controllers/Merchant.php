@@ -8,7 +8,7 @@ require APPPATH . 'libraries/RestController.php';
 
 use chriskacerguis\RestServer\RestController;
 
-class Assign  extends RestController
+class Merchant  extends RestController
 {
     public function __construct()
     {
@@ -29,13 +29,13 @@ class Assign  extends RestController
     {
         $this->response([[
             "id" => "",
-            "vehicle_type" => "",
-            "vehicle" => "",
-            "driver" => "",
+            "full_name" => "",
+            "email" => "",
             "phone_number" => "",
-            "plate_number" => "",
-            "supplier" => "",
-            "warehouse" => ""
+            "company_name" => "",
+            "company_address" => "",
+            "role" => "",
+            "status" => "",
         ]]);
     }
 
@@ -44,15 +44,14 @@ class Assign  extends RestController
     {
         $this->response([
             "id" => "",
-            "vechicle_type_id" => "",
-            "vehicle_id" => "",
-            "supplier_id" => "",
-            "warehouse_id" => "",
-            "driver_id" => "",
-            "date" => "",
-            "remark" => ""
+            "full_name" => "",
+            "email" => "",
+            "phone_number" => "",
+            "company_name" => "",
+            "company_address" => "",
+            "delivery_team" => "",
+            "role" => ""
         ]);
-
     }
 
     //for delete
@@ -64,9 +63,8 @@ class Assign  extends RestController
         ]);
     }
 
-
-    //for supplier get by search in (filter)
-    public function load_supplier_post()
+    //for group get 
+    public function load_group_get()
     {
         $this->response([
             ["value" => "", "text" => ""],
@@ -74,21 +72,6 @@ class Assign  extends RestController
         ]);
     }
 
-    //for warehouse get
-    public function load_warehouse_get($supplier_id)
-    {
-        $this->response([
-            ["value" => "", "text" => ""],
-            ["value" => "", "text" => ""]
-        ]);
-    }
 
-    // Assign driver to vehicle
-    public function agent_post()
-    {
-        $this->response([
-            "status" => true,
-            "message" => "saved successfully !"
-        ]);
-    }
+
 }
